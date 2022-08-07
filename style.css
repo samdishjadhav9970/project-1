@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Orbitron", serif;
+    overflow-y: hidden;
+}
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+/*------------------------- Navbar section ------------------------ */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    align-items: center;
+}
+.navbar-container div:first-child img {
+    width: 120px;
+}
+
+.navbar-container .list {
+    display: flex;
+    list-style-type: none;
+    font-family: "Orbitron";
+    font-size: 20px;
+    font-weight: 500;
+}
+.navbar-container .list .list-item {
+    cursor: pointer;
+}
+.navbar-container .list .list-item:not(:last-child) {
+    margin-right: 40px;
+}
+.navbar-container .list .list-item:not(:first-child) {
+    font-size: 18px;
+}
+.navbar-container .list .list-item:nth-child(1) {
+    font-weight: 800;
+}
+.navbar-container .list .list-item:nth-child(1)::after {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 80%;
+    background-color: #000000;
+    margin: 0 auto;
+}
+.navbar-container .button-group {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar-container .nav-button {
+    padding: 7px 40px;
+    border: 3px solid #000000;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    cursor: text;
+}
+.navbar-container .search-icon {
+    padding-top: 8px;
+}
+
+@media only screen and (max-width: 1174px) {
+    .container {
+        max-width: 65rem;
+    }
+    .navbar-container .list {
+        font-size: 16px;
+    }
+    .navbar-container .list .list-item:not(:first-child) {
+        font-size: 14px;
+    }
+    .navbar-container .nav-button {
+        padding: 5px 30px;
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 666px) {
+    .navbar-container {
+        width: auto;
+        height: 15vh;
+        overflow-x: scroll !important;
+    }
+    .navbar-container .list .list-item:first-child {
+        margin-left: 40px;
+    }
+    .navbar-container div:first-child img {
+        width: 100px;
+    }
+
+    .navbar-container .search-icon {
+        margin-right: 8px;
+        margin-left: 40px;
+    }
+    
+}
+@media only screen and (max-width: 770px) {
+    .navbar-container {
+        height: 14vh;
+    }
+}
+
+/*------------------------- HeroBanner section ------------------------ */
+
+
+.hero-container {
+    display: flex;
+    position: relative;
+    height: 80vh;
+}
+.hero-container .square > img {
+    position: relative;
+    width: 320px;
+    top: 225px;
+    left: 146px;
+}
+.hero-container .star {
+    position: absolute;
+    right: 0;
+}
+.hero-container .star img {
+    width: 40px;
+}
+.hero-container .star:nth-child(2) {
+    position: absolute;
+    right: 640px;
+    top: 490px;
+}
+.hero-container .star:nth-child(2) img {
+    width: 30px;
+}
+.hero-container .globe {
+    position: absolute;
+    left: 680px;
+    top: -20px;
+}
+.hero-container .globe img {
+    width: 50px;
+}
+.hero-container span + div {
+    width: 220px;
+}
+.hero-container .globe + div > img {
+    position: absolute;
+    width: 390px;
+    left: 12px;
+    top: 14px;
+}
+.hero-container-right {
+    width: 890px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+.hero-container-right .hero-heading {
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+}
+.hero-container-right .hero-description {
+    color: #8a8989;
+    font-size: 15px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.hero-container-right .button-email {
+    font-family: "Orbitron";
+    padding: 5px 30px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.hero-container-right .button-join {
+    font-family: "Orbitron";
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-bottom: 110px;
+}
+.contact-heading {
+    text-align: center;
+    font-family: "Poppins";
+    color: #605e5e;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+.icons > span > img {
+    width: 32px;
+    cursor: pointer;
+}
+.icons > span:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1174px) {
+    .hero-container-right .hero-heading {
+        font-size: 2.8rem;
+    }
+    .hero-container-right .hero-description {
+        font-size: 13px;
+    }
+    
+    .hero-container .square > img {
+        position: relative;
+        width: 240px;
+        top: 225px;
+        left: 146px;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 320px;
+        left: 19px;
+        top: 30px;
+    }
+   
+}
+@media only screen and (max-width: 998px) {
+    .hero-container .globe {
+        display: none;
+    }
+    .hero-container-right .hero-heading {
+        font-size: 2.1rem;
+        margin-bottom: 25px;
+    }
+    .hero-container-right .hero-description {
+        font-size: 11px;
+        max-width: 450px;
+        margin-bottom:35px;
+    }
+
+    .hero-container .square > img {
+        position: relative;
+        width: 200px;
+        top: 170px;
+        left: 106px;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 250px;
+        left: 19px;
+        top: 30px;
+    }
+    .hero-container-right .button-email {
+        font-family: "Orbitron";
+        padding: 4px 20px;
+        font-size: .7rem;
+        font-weight: 500;
+    }
+    .hero-container-right .button-join {
+        font-family: "Orbitron";
+        padding: 4px;
+        font-size: .7rem;
+        margin-bottom: 50px;
+    }
+
+    .contact-heading {
+        font-size: .8rem;
+    }
+    .icons > span > img {
+        width: 22px;
+        cursor: pointer;
+    }
+    
+}
+@media only screen and (max-width: 770px) {
+    .hero-container {
+        flex-direction: column;
+        top: -40px;
+        height: 80vh;
+        overflow: hidden;
+    }
+    .hero-container-right {
+        margin-top: 190px !important;
+    }
+    .hero-container-right .hero-heading {
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+    }
+    .hero-container .star {
+        left: 40px;
+        top: 80px;
+    }
+    .hero-container .star:nth-child(2) {
+        left: 450px;
+        top: 298px;
+    }
+    .hero-container-right {
+        width: auto;
+        margin-top: 200px;
+    }
+    .hero-container .square > img {
+        position: relative;
+        width: 180px;
+        top: 180px;
+        left: 50%;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 220px;
+        left: 30%;
+        top: 60px;
+    }
+    .hero-container-right .button-join {
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 450px) {
+  
+    .hero-container {
+        flex-direction: column;
+        top: -40px;
+        height: 100vh;
+        padding: 0 10px;
+    }
+    .hero-container-right {
+        margin-top: 220px !important;
+    }
+    .hero-container-right .hero-heading {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    .hero-container .star {
+        left: 40px;
+        top: 40px;
+    }
+    .hero-container-right {
+        width: auto;
+        margin-top: 200px;
+    }
+    .hero-container .square > img {
+        position: relative;
+        width: 180px;
+        top: 180px;
+        left: 40%;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 220px;
+        left: 20%;
+        top: 60px;
+    }
+    .hero-container-right .button-join {
+        margin-bottom: 20px;
+    }
+    .hero-container .star {
+        left: 20px;
+        top: 70px;
+    }
+    .hero-container .star:nth-child(2) img {
+        width: 20px;
+    }
+    .hero-container .star:nth-child(2) {
+        left: 299px;
+        top: 368px;
+    }
+}
